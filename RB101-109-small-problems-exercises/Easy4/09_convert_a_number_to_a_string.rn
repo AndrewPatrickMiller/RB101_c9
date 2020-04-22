@@ -1,0 +1,31 @@
+=begin
+Title:
+-------------------------Process The Problem
+  Input:
+  Output:
+  Requirements:
+  Rules:
+  Mental Model(stepwise):
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+-------------------------Examples and Tests
+
+-------------------------Data Structures
+
+-------------------------Alorithim
+
+PASTE MENTAL MODEL HERE THEN FILL ALGORITHIM IN BETWEEN THE STEPS BY CODE
+
+-------------------------Code
+
+
+=end
+
+def integer_to_string(integer)
+ string = integer.digits.reverse.join
+end

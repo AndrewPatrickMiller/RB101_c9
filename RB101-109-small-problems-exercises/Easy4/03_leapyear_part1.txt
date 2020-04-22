@@ -1,0 +1,30 @@
+Leap Years (Part 1)
+Process The Problem
+Leap years occur every year that is divisible by 4, unless the year is also divisible by 100. If the year                           	
+Identify Input and Output
+Input: the leap year.
+Output: true or false                                  	
+Identify Explicit Requirements
+A leap year is every 4 years except if it is divisible by 100, but if it is divisible by 100 and 400 then it is a leap year.                                    
+Identify Rules
+                                    
+Model
+                                    
+Examples and Tests
+                                    
+
+Data Structures
+                                 
+
+Algorithm
+                                    
+
+Code 
+                                    
+
+
+
+
+
+
+

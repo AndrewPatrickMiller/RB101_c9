@@ -1,16 +1,3 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
 Title:
 -------------------------Process The Problem
@@ -39,7 +26,8 @@ Know the :
   Data Type , Data Structure, method side-effects and return. When to extract a method. 
 --------------------------------------------------------------------------------
 =end
-require 'pry-byebug'
+require "pry-byebug"
+
 
 =begin
 --------------------------------------------------------------------------------
@@ -77,4 +65,3 @@ What are the side effects of the methods, and what are the return values?
 
 
 =end
-```

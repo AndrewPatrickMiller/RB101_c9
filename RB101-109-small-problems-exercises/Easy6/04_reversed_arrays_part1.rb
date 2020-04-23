@@ -1,26 +1,13 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
 Title:
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
+  Input: array
+  Output: array with the elements reversed
+  Requirements: the object must stay the same object
   Rules:
   Mental Model(stepwise):
-          -
-          -
+          - pass the array into a method that reassigns each element from the end back to the begining and the the elments at the begining to the end. 
+          - then set the result equal to the method on the list 
           -
           -
           -
@@ -39,7 +26,46 @@ Know the :
   Data Type , Data Structure, method side-effects and return. When to extract a method. 
 --------------------------------------------------------------------------------
 =end
-require 'pry-byebug'
+require "pry-byebug"
+
+def reverse!(array)
+  left_idx = 0
+  right_idx = -1
+
+  loop do
+    array[left_idx], array[right_idx] = array[right_idx], array[left_idx]
+    p array
+
+    left_idx += 1
+    right_idx -= 1
+    break if left_idx >= array.size / 2
+  end
+  array
+end
+
+arr = [1, 2, 3, 4, 5]
+p result = reverse!(arr)
+p arr
+p arr.object_id == result.object_id
+
+# list = [1,2,3,4]
+# result = reverse!(list)
+# result == [4, 3, 2, 1]
+# list == [4, 3, 2, 1]
+# list.object_id == result.object_id
+
+# list = %w(a b e d c)
+# reverse!(list) == ["c", "d", "e", "b", "a"]
+# list == ["c", "d", "e", "b", "a"]
+
+# list = ['abc']
+# reverse!(list) == ["abc"]
+# list == ["abc"]
+
+# list = []
+# reverse!(list) == []
+# list == []
+
 
 =begin
 --------------------------------------------------------------------------------
@@ -77,4 +103,3 @@ What are the side effects of the methods, and what are the return values?
 
 
 =end
-```

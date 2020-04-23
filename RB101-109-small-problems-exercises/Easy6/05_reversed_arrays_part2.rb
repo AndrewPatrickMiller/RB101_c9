@@ -1,16 +1,3 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
 Title:
 -------------------------Process The Problem
@@ -39,7 +26,34 @@ Know the :
   Data Type , Data Structure, method side-effects and return. When to extract a method. 
 --------------------------------------------------------------------------------
 =end
-require 'pry-byebug'
+require "pry-byebug"
+
+def reverse(array)
+  left_idx = 0
+  right_idx = -1
+  newarray=Array.new(array.size)
+  loop do
+    newarray[left_idx], newarray[right_idx] = array[right_idx], array[left_idx]
+    
+    left_idx += 1
+    right_idx -= 1
+    break if left_idx >= array.size 
+  end
+  newarray
+end
+
+p reverse([1,2,3,4]) #== [4,3,2,1]
+
+p reverse([1,2,3,4]) == [4,3,2,1]          # => true
+p reverse(%w(a b e d c)) == %w(c d e b a)  # => true
+p reverse(['abc']) == ['abc']              # => true
+p reverse([]) #== []                        # => true
+
+p list = [1, 3, 2]                      # => [1, 3, 2]
+p new_list = reverse(list)              # => [2, 3, 1]
+p list.object_id != new_list.object_id  # => true
+p list == [1, 3, 2]                     # => true
+p new_list == [2, 3, 1]        
 
 =begin
 --------------------------------------------------------------------------------
@@ -77,4 +91,3 @@ What are the side effects of the methods, and what are the return values?
 
 
 =end
-```

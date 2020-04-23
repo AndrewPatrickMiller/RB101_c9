@@ -1,6 +1,9 @@
+require 'pry-byebug'
+
 p "Please enter an integer greater than 0:"
 integer = gets.chomp.to_i
-p "Enter 's' to compute the sum, 'p' to compute the product."
+p "Enter 's' to compute the sum, 'p' to compute the product of the range from 0 to #{integer}"
+binding.pry
 command = gets.chomp
 range = (1..integer)
 sum= range.reduce(:+)

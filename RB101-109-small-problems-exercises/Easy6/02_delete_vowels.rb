@@ -1,16 +1,3 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
 Title:
 -------------------------Process The Problem
@@ -39,8 +26,26 @@ Know the :
   Data Type , Data Structure, method side-effects and return. When to extract a method. 
 --------------------------------------------------------------------------------
 =end
-require 'pry-byebug'
+require "pry-byebug"
 
+VOWELS = ['a','e','i','o','u','A','E','I','O','U']
+
+def remove_vowels(array_strings)
+  
+  array_strings.each do |string|
+    VOWELS.each do |vowel| 
+      string.delete!(vowel) 
+      string
+    end
+    array_strings
+  end
+  
+
+end
+
+p remove_vowels(%w(abcdefghijklmnopqrstuvwxyz)) #== %w(bcdfghjklmnpqrstvwxyz)
+p remove_vowels(%w(green YELLOW black white)) #== %w(grn YLLW blck wht)
+p remove_vowels(%w(ABC AEIOU XYZ))# == ['BC', '', 'XYZ']
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -77,4 +82,3 @@ What are the side effects of the methods, and what are the return values?
 
 
 =end
-```

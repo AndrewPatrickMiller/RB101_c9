@@ -1,21 +1,8 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title: The End Is Near But Not here
 -------------------------Process The Problem
-  Input:
-  Output:
+  Input: string
+  Output:the next to last string
   Requirements:
   Rules:
   Mental Model(stepwise):
@@ -41,6 +28,13 @@ Know the :
 =end
 require 'pry-byebug'
 
+def penultimate(string)
+  array = string.split
+  array[-2]
+end
+
+p penultimate('last word') == 'last'
+p penultimate('Launch School is great!') == 'is'
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +69,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

@@ -1,25 +1,12 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title: Palindromic Substrings
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
+  Input: text
+  Output: the palindromic substrings
+  Requirements:find every substring that is a palidnrome
   Rules:
   Mental Model(stepwise):
-          -
+          - compare if the sequence of characters is the same forward as it is backwards using reverse.
           -
           -
           -
@@ -40,7 +27,23 @@ Know the :
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+require './04_all_substrings.rb'
 
+def palindromes(string)
+  new_array = []
+  substrings(string).each do |element|
+    if element == element.reverse && element.length > 1
+      new_array << element
+       new_array
+    end
+  end
+  new_array
+end
+
+p palindromes('abcd')# == []
+p palindromes('madam')# == ['madam', 'ada']
+p palindromes('hello-madam-did-madam-goodbye')# == [ 'll', '-madam-', '-madam-did-madam-', 'madam', 'madam-did-madam', 'ada','adam-did-mada', 'dam-did-mad', 'am-did-ma', 'm-did-m', '-did-', 'did','-madam-', 'madam', 'ada', 'oo']
+p palindromes('knitting cassettes') == [ 'nittin', 'itti', 'tt', 'ss', 'settes', 'ette', 'tt']
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +78,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

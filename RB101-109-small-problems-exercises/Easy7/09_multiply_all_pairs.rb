@@ -1,25 +1,12 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:Multiply All Pairs
 -------------------------Process The Problem
-  Input:
-  Output:
+  Input:two seperate arrays
+  Output: product of each possible combination of numbers between the first and second array sorted lowest to highest. 
   Requirements:
   Rules:
   Mental Model(stepwise):
-          -
+          - 
           -
           -
           -
@@ -41,6 +28,18 @@ Know the :
 =end
 require 'pry-byebug'
 
+def multiply_all_pairs(array1, array2)
+  new_array = []
+  array1.each do |number1|
+    array2.each do |number2|
+      new_array << number1 * number2
+    end
+  end
+  new_array.sort
+end
+
+
+p multiply_all_pairs([2, 4], [4, 3, 1, 2])# == [2, 4, 4, 6, 8, 8, 12, 16]
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +74,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

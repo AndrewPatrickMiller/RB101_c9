@@ -1,27 +1,14 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title: Sun of Sums
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
-  Rules:
+  Input: array
+  Output: the sum of the sum of each leading subsequence. Sum each subsequence of the array that starts with the first index. 
+  Requirements: start with the first index
+  Rules: integer out put
   Mental Model(stepwise):
-          -
-          -
-          -
+          - iterate through the subsequences of the array
+          - add up the subsequences of each array. 
+          - 
           -
           -
           -
@@ -41,6 +28,21 @@ Know the :
 =end
 require 'pry-byebug'
 
+def sum_of_sums(array)
+  result =0
+  counter =0 
+    loop do 
+     result+= array[0..counter].reduce(:+)
+      counter +=1
+      break if counter == array.size
+    end
+  result
+end
+
+p sum_of_sums([3, 5, 2]) == (3) + (3 + 5) + (3 + 5 + 2) # -> (21)
+p sum_of_sums([1, 5, 7, 3]) == (1) + (1 + 5) + (1 + 5 + 7) + (1 + 5 + 7 + 3) # -> (36)
+p sum_of_sums([4]) == 4
+p sum_of_sums([1, 2, 3, 4, 5]) == 35
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +77,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

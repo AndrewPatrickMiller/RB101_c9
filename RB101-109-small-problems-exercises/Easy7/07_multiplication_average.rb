@@ -1,38 +1,35 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title: Multiplication Average
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
-  Rules:
+  Input: array of integers
+  Output: multiplies every number together and then divides by the total integers. 
+  Requirements: the array is not empty
+  Rules: round to three decimal places
   Mental Model(stepwise):
-          -
-          -
-          -
+          - initialize an integer and assign it to the product of all the numbers of the array
+          - divide the product by the number of elements in the array
+          -round the quotient to the nearest thousandths place
           -
           -
           -
           -
 -------------------------Examples and Tests
+show_multiplicative_average([3, 5]) == 7.500
 
+show_multiplicative_average([6]) == 6.000
+
+show_multiplicative_average([2, 5, 7, 11, 13, 17]) == 28361.667
 -------------------------Data Structures
 
 -------------------------Algorithim(how many methods?)
 
-PASTE MENTAL MODEL HERE THEN FILL ALGORITHIM IN BETWEEN THE STEPS BY CODE
+  Mental Model(stepwise):
+          - initialize an integer and assign it to the product of all the numbers of the array
+          array.reduce(:*) Array#reduce
+          - divide the product by the number of elements in the array
+          Array#size
+          -round the quotient to the nearest thousandths place
+          BigDecimal#round(3)
 
 -------------------------Code
 Know the :
@@ -41,6 +38,18 @@ Know the :
 =end
 require 'pry-byebug'
 
+def show_multiplicative_average(array)
+  product = array.reduce(:*)
+  average = product/Float(array.size)
+  result = format("%.3f",average)
+  puts "The result is #{result}!"
+end 
+
+p show_multiplicative_average([3, 5]) == 7.500
+
+p show_multiplicative_average([6]) == 6.000
+
+p show_multiplicative_average([2, 5, 7, 11, 13, 17]) == 28361.667
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +84,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

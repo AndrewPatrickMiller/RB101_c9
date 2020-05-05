@@ -1,18 +1,5 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:Madlibs
 -------------------------Process The Problem
   Input:
   Output:
@@ -40,7 +27,19 @@ Know the :
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+def madlibs
+  puts "Enter a noun:"
+  noun = gets.chomp
+  puts "Enter an ing verb:"
+  verb = gets.chomp
+  puts "Enter an adjective:"
+  adjective = gets.chomp
+  puts "Enter an adverb:"
+  adverb = gets.chomp
+  puts "Is that a #{noun} #{verb} a #{adjective} #{noun}  #{adverb}"
+end
 
+madlibs
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +74,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

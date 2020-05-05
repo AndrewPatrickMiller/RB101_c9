@@ -1,21 +1,8 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:All Substrings
 -------------------------Process The Problem
-  Input:
-  Output:
+  Input:string
+  Output:array of all the substirngs
   Requirements:
   Rules:
   Mental Model(stepwise):
@@ -40,6 +27,19 @@ Know the :
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+require './03_leading_substrings.rb'
+def substrings(string)
+  counter = 0
+  array = []
+  loop do 
+   array << substrings_at_start(string[counter..-1])
+   counter +=1
+   break if counter == string.length
+  end
+  array.flatten
+end
+
+# p substrings('abcde')
 
 =begin
 --------------------------------------------------------------------------------
@@ -75,4 +75,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

@@ -1,21 +1,8 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:fizzbuzz
 -------------------------Process The Problem
-  Input:
-  Output:
+  Input: two arguments starting number and an ending number
+  Output: print out all the numbers if a number is divisible by 3 print fizz if it is divisible by 5 print buzz and if it divizible by 3 and 5 print fizz buzz
   Requirements:
   Rules:
   Mental Model(stepwise):
@@ -40,6 +27,23 @@ Know the :
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+
+def fizzbuzz(first,last)
+  array = *(first..last)
+    array.each do |number|
+      if number%3 ==0 && number%5 == 0
+        print "fizzbuzz, "
+      elsif number%3 == 0
+        print "fizz, "
+      elsif number%5 == 0
+        print "buzz, "
+      else
+        print "#{number}, "
+      end
+    end
+end
+
+fizzbuzz(1,15)
 
 =begin
 --------------------------------------------------------------------------------
@@ -75,4 +79,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

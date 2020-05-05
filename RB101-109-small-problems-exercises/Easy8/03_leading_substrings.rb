@@ -1,26 +1,13 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title: Leading Substrings
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
+  Input: input a string
+  Output: an array of substrings
+  Requirements:add obe additional character from the string to  the next element eac time
   Rules:
   Mental Model(stepwise):
-          -
-          -
+          - create an array
+          - add each subsequence into the array
           -
           -
           -
@@ -40,6 +27,21 @@ Know the :
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+
+def substrings_at_start(string)
+  array= []
+  counter =0
+    loop do 
+      array << string[0..counter]
+      counter +=1
+      break if counter == string.length
+    end
+  array
+end
+
+# p substrings_at_start('abc')# == ['a', 'ab', 'abc']
+# p substrings_at_start('a')# == ['a']
+# p substrings_at_start('xyzzy') == ['x', 'xy', 'xyz', 'xyzz', 'xyzzy']
 
 =begin
 --------------------------------------------------------------------------------
@@ -75,4 +77,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

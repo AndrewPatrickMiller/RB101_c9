@@ -1,45 +1,46 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:Capitalize Words
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
+  Input: mutli word string
+  Output: same string with he first letters of each word uppercased other letter lowercased
+  Requirements: return a new string with the original value
   Rules:
   Mental Model(stepwise):
-          -
-          -
-          -
+          - downcase the string. 
+          -split it into words
+          -upercase the first letter of each word
           -
           -
           -
           -
 -------------------------Examples and Tests
+word_cap('four score and seven') == 'Four Score And Seven'
+word_cap('the javaScript language') == 'The Javascript Language'
+word_cap('this is a "quoted" word') == 'This Is A "quoted" Word'
 
 -------------------------Data Structures
 
 -------------------------Algorithim(how many methods?)
-
-PASTE MENTAL MODEL HERE THEN FILL ALGORITHIM IN BETWEEN THE STEPS BY CODE
-
+          - downcase the string. 
+              Use String#downcase on the input string. 
+          -split it into words
+              Use String#split to convert the string to an Array
+          -upercase the first letter of each word
+              use String#capitalize to capitalize the first letter.
 -------------------------Code
 Know the :
   Data Type , Data Structure, method side-effects and return. When to extract a method. 
 --------------------------------------------------------------------------------
 =end
 require 'pry-byebug'
+
+def word_cap(string)
+  string.downcase.split.map {|word| word.capitalize}.join ' '
+end
+
+p word_cap('four score and seven')# == 'Four Score And Seven'
+p word_cap('the javaScript language') == 'The Javascript Language'
+p word_cap('this is a "quoted" word') == 'This Is A "quoted" Word'
 
 =begin
 --------------------------------------------------------------------------------
@@ -75,4 +76,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```

@@ -1,28 +1,15 @@
-
-#   <div align='center'> **RB 101 Programming Foundations**   <div>
-
-``` ruby
-def greeting(person)
-  puts "Hello #{person}, Thank You for visiting my GitHub repository."
-end
-
-greeting(you)
-
-```
-This repository is for Launch School's RB 101 course, which is related to its RB 109 assessment course.
-```ruby
 =begin
-Title:
+Title:Multiply List
 -------------------------Process The Problem
-  Input:
-  Output:
-  Requirements:
+  Input:array with two sub arrays
+  Output: an array that is an array of the products of the coresponding elements in each array. The elements that have the same index. 
+  Requirements: arrays are the same size
   Rules:
   Mental Model(stepwise):
-          -
-          -
-          -
-          -
+          - access each  array using []
+          - use a counter integer to increment the products and put them into a new array.
+          - make a new array and a counter integer at the begining of the method. 
+          - insert the products into the array and return the array
           -
           -
           -
@@ -41,6 +28,22 @@ Know the :
 =end
 require 'pry-byebug'
 
+def multiply_list(array1, array2)
+  new_array= []
+  counter = 0
+  array1.size.times do 
+    new_array << array1[counter]*array2[counter]
+    counter += 1
+    new_array
+   end
+   new_array
+end
+
+
+
+
+
+p multiply_list([3, 5, 7], [9, 10, 11]) == [27, 50, 77]
 =begin
 --------------------------------------------------------------------------------
 -------------------------Debugging
@@ -75,4 +78,3 @@ What are the side effects of the methods, and what are the return values?
 Where did your methods come from? (core library, frameworks, personal files, other libraries)
 
 =end
-```
